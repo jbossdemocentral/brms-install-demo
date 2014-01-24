@@ -28,6 +28,8 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v0.2 - JBoss BRMS 6.0.0.CR1 in stalled on JBoss EAP 6.1.1.
+
 - v0.1 - JBoss BRMS 6.0.0.Beta in stalled on JBoss EAP 6.1.1.
 
 

@@ -14,7 +14,8 @@ set SRC_DIR=%PROJECT_HOME%\installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
 set EAP=jboss-eap-6.1.1.zip
-set BPMS=jboss-brms-6.0.0.Beta-redhat-5-deployable-eap6.x.zip
+set BPMS=jboss-brms-6.0.0.GA-redhat-1-deployable-eap6.x.zip
+set VERSION=6.0.0.CR1
 
 REM wipe screen.
 cls
