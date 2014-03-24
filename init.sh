@@ -11,7 +11,7 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 EAP=jboss-eap-6.1.1.zip
-BPMS=jboss-brms-6.0.1.GA-redhat-2-deployable-eap6.x.zip
+BPMS=jboss-brms-6.0.1.GA-redhat-3-deployable-eap6.x.zip
 VERSION=6.0.1.GA
 
 # wipe screen.
