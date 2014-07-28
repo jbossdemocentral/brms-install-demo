@@ -6,7 +6,7 @@ Project to automate the installation of this product without preconfiguration be
 Quickstart
 ----------
 
-1. Clone project.
+1. [Download and unzip.](https://github.com/eschabell/brms-install-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
 
