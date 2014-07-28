@@ -8,13 +8,13 @@ Quickstart
 
 1. Clone project.
 
-2. Add products to installs directory.
+2. Add product installer to installs directory.
 
 3. Run 'init.sh' or 'init.bat' file.
 
-4. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite)
+4. Login to http://localhost:8080/business-central  (u:erics / p:jbossbrms1!)
 
-5. Enjoy empty installed and configured JBoss BRMS 6.
+5. Enjoy installed and configured JBoss BRMS 6.
 
 
 Supporting Articles
@@ -27,6 +27,8 @@ Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v1.3 - JBoss BRMS 6.0.2 installer used to setup basic product installation on JBoss EAP 6.1.1.
 
 - v1.2 - JBoss BRMS 6.0.2, installed on JBoss EAP 6.1.1.
 

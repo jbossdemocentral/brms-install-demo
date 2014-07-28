@@ -13,8 +13,7 @@ set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%\installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
-set EAP=jboss-eap-6.1.1.zip
-set BPMS=jboss-brms-6.0.2.GA-redhat-5-deployable-eap6.x.zip
+set BRMS=jboss-brms-installer-6.0.2.GA-redhat-5.jar
 set VERSION=6.0.2.GA
 
 REM wipe screen.
@@ -42,31 +41,21 @@ echo #################################################################
 echo.
 
 REM make some checks first before proceeding.	
-if exist %SRC_DIR%\%EAP% (
-        echo EAP sources are present...
+if exist %SRC_DIR%\%BRMS% (
+        echo Product sources are present...
         echo.
 ) else (
-        echo Need to download %EAP% package from the Customer Support Portal
+        echo Need to download %BRMS% package from the Customer Support Portal
         echo and place it in the %SRC_DIR% directory to proceed...
         echo.
         GOTO :EOF
 )
 
-REM Create the target directory if it does not already exist.
-if not exist %PROJECT_HOME%\target (
-        echo - creating the target directory...
-        echo.
-        mkdir %PROJECT_HOME%\target
-) else (
-        echo - detected target directory, moving on...
-        echo.
-)
-
 REM Move the old JBoss instance, if it exists, to the OLD position.
 if exist %JBOSS_HOME% (
-         echo - existing JBoss Enterprise EAP 6 detected...
+         echo - existing JBoss product install detected...
          echo.
-         echo - moving existing JBoss Enterprise EAP 6 aside...
+         echo - moving existing JBoss product install aside...
          echo.
         
         if exist "%JBOSS_HOME%.OLD" (
@@ -74,30 +63,12 @@ if exist %JBOSS_HOME% (
         )
         
          move "%JBOSS_HOME%" "%JBOSS_HOME%.OLD"
-        
-        REM Unzip the JBoss EAP instance.
-        echo.
-        echo Unpacking JBoss Enterprise EAP 6...
-        echo.
-        cscript /nologo %SUPPORT_DIR%\unzip.vbs %SRC_DIR%\%EAP% %PROJECT_HOME%\target
-        
- ) else (
-                
-        REM Unzip the JBoss EAP instance.
-        echo Unpacking new JBoss Enterprise EAP 6...
-        echo.
-        cscript /nologo %SUPPORT_DIR%\unzip.vbs %SRC_DIR%\%EAP% %PROJECT_HOME%\target
  )
 
-REM Unzip the required files from JBoss product deployable.
-echo Unpacking %PRODUCT% %VERSION%...
+REM Run installer.
+echo Product installer running now...
 echo.
-cscript /nologo %SUPPORT_DIR%\unzip.vbs %SRC_DIR%\%BPMS% %PROJECT_HOME%\target
-
-echo - enabling demo accounts logins in application-users.properties file...
-echo.
-xcopy /Y /Q "%SUPPORT_DIR%\application-users.properties" "%SERVER_CONF%"
-echo. 
+java -jar %SRC_DIR%/%BPMS% %SUPPORT_DIR%\installation-brms -variablefile %SUPPORT_DIR%\installation-brms.variables
 
 echo - enabling demo accounts role setup in application-roles.properties file...
 echo.
@@ -112,6 +83,11 @@ echo.
 echo.
 echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
 echo.
-
+echo You can open business central in browser at:
+echo.
+echo  localhost:8080/business-central 
+echo.
+echo and login as user: erics and password: jbossbrms1!
+echo.
 echo %PRODUCT% %VERSION% %DEMO% Setup Complete.
 echo.
