@@ -10,8 +10,8 @@ SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-BRMS=jboss-brms-installer-6.0.2.GA-redhat-5.jar
-VERSION=6.0.2.GA
+BRMS=jboss-brms-installer-6.0.3.GA-redhat-1.jar
+VERSION=6.0.3
 
 # wipe screen.
 clear 

@@ -28,6 +28,8 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v1.4 - JBoss BRMS 6.0.3 installer on JBoss EAP 6.1.1.
+
 - v1.3 - JBoss BRMS 6.0.2 installer used to setup basic product installation on JBoss EAP 6.1.1.
 
 - v1.2 - JBoss BRMS 6.0.2, installed on JBoss EAP 6.1.1.
