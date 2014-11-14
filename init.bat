@@ -6,15 +6,15 @@ set DEMO=Install Demo
 set AUTHORS=Eric D. Schabell
 set PROJECT=git@github.com:eschabell/brms-install-demo.git
 set PRODUCT=JBoss BRMS
-set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.1
+set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.3
 set SERVER_DIR=%JBOSS_HOME%\standalone\deployments\
 set SERVER_CONF=%JBOSS_HOME%\standalone\configuration\
 set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%\installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
-set BRMS=jboss-brms-installer-6.0.3.GA-redhat-1.jar
-set VERSION=6.0.3
+set BRMS=jboss-brms-installer-6.1.0.ER2.jar
+set VERSION=6.1.ER2
 
 REM wipe screen.
 cls
