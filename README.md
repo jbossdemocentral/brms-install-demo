@@ -6,7 +6,7 @@ Project to automate the installation of this product without preconfiguration be
 Quickstart
 ----------
 
-1. [Download and unzip.](https://github.com/eschabell/brms-install-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-install-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
 
@@ -28,6 +28,8 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v1.4 - moved to JBoss Dem Central organization.
+
 - v1.4 - JBoss BRMS 6.0.3 installer on JBoss EAP 6.1.1.
 
 - v1.3 - JBoss BRMS 6.0.2 installer used to setup basic product installation on JBoss EAP 6.1.1.
@@ -45,4 +47,4 @@ See the tagged releases for the following versions of the product:
 - v0.1 - JBoss BRMS 6.0.0.Beta, installed on JBoss EAP 6.1.1.
 
 
-![JBoss BRMS](https://github.com/eschabell/brms-install-demo/blob/master/support/jboss-brms.png?raw=true)
+![JBoss BRMS](https://github.com/jbossdemocentral/brms-install-demo/blob/master/support/jboss-brms.png?raw=true)

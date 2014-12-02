@@ -1,7 +1,7 @@
 #!/bin/sh 
 DEMO="Install Demo"
 AUTHORS="Eric D. Schabell"
-PROJECT="git@github.com:eschabell/brms-install-demo.git"
+PROJECT="git@github.com:jbossdemocentral/brms-install-demo.git"
 PRODUCT="JBoss BRMS"
 JBOSS_HOME=./target/jboss-eap-6.1
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
