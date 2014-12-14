@@ -71,7 +71,7 @@ echo.
 call java -jar %SRC_DIR%/%BRMS% %SUPPORT_DIR%\installation-brms -variablefile %SUPPORT_DIR%\installation-brms.variables
 
 if not "%ERRORLEVEL%" == "0" (
-	echo Error Occurred During JBoss Installation!
+	echo Error Occurred During %PRODUCT% Installation!
 	echo.
 	GOTO :EOF
 )
