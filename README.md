@@ -28,7 +28,7 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.4 - moved to JBoss Dem Central organization.
+- v1.5 - moved to JBoss Dem Central organization, updated windows init.bat support.
 
 - v1.4 - JBoss BRMS 6.0.3 installer on JBoss EAP 6.1.1.
 
