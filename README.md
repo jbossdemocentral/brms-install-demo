@@ -10,7 +10,7 @@ Quickstart
 
 2. Add product installer to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file.
+3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges
 
 4. Login to http://localhost:8080/business-central  (u:erics / p:jbossbrms1!)
 
