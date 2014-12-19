@@ -1,11 +1,23 @@
 JBoss BRMS 6 Install Demo 
 =========================
-
 Project to automate the installation of this product without preconfiguration beyond a single admin user.
 
-Quickstart
-----------
 
+Install with one click in xPaaS (brmsPaaS)
+-----------------------------------------
+After clicking button, ensure `Gear` size is set to `large`:
+
+[![Click to install OpenShift](http://launch-shifter.rhcloud.com/launch/light/Install brmsPaaS.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url=)
+
+Once installed you can use the JBoss BRMS logins: 
+
+   * u:erics  p: jbossbrms  (admin)
+
+   * u: alan  p: jbossbrms  (analyst)
+
+
+Manual setup on OpenShift
+-------------------------
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-install-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
@@ -28,7 +40,7 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.5 - moved to JBoss Dem Central organization, updated windows init.bat support.
+- v1.5 - moved to JBoss Dem Central organization, updated windows init.bat support and one click install button.
 
 - v1.4 - JBoss BRMS 6.0.3 installer on JBoss EAP 6.1.1.
 
