@@ -28,8 +28,9 @@ Manual setup on OpenShift
 
 5. Enjoy installed and configured JBoss BRMS 6.
 
-Docker
--------------------------
+
+Optional Docker Install
+-----------------------
 
 The following steps can be used to configure and run the demo in a docker container
 
@@ -37,19 +38,21 @@ The following steps can be used to configure and run the demo in a docker contai
 
 2. Add product installer to installs directory.
 
-3. Build demo image
+3. Copy contents of support/docker directory to the project root.
+
+4. Build demo image
 
 	```
 	docker build -t jbossdemocentral/brms-install-demo .
 	```
-4. Start demo container
+5. Start demo container
 
 	```
 	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-install-demo
 	```
-5. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:jbossbrms1!)
+6. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:jbossbrms1!)
 
-6. Enjoy installed and configured JBoss BRMS 6.
+7. Enjoy installed and configured JBoss BRMS 6.
 
 Additional information can be found in the jbossdemocentral docker [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
@@ -64,6 +67,8 @@ Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v1.6 - JBoss BRMS 6.0.3 installer with optional docker installation.
 
 - v1.5 - moved to JBoss Dem Central organization, updated windows init.bat support and one click install button.
 
