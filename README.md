@@ -2,22 +2,11 @@ JBoss BRMS 6 Install Demo
 =========================
 Project to automate the installation of this product without preconfiguration beyond a single admin user.
 
-
-Install with one click in xPaaS (brmsPaaS)
------------------------------------------
-After clicking button, ensure `Gear` size is set to `large`:
-
-[![Click to install OpenShift](http://launch-shifter.rhcloud.com/launch/light/Install brmsPaaS.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url=)
-
-Once installed you can use the JBoss BRMS logins: 
-
-   * u:erics  p: jbossbrms  (admin)
-
-   * u: alan  p: jbossbrms  (analyst)
+There are three options available to you for using this demo; local, OpenShift and Docker.
 
 
-Manual setup on OpenShift
--------------------------
+Option 1 - Install on your machine
+----------------------------------
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-install-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
@@ -29,9 +18,21 @@ Manual setup on OpenShift
 5. Enjoy installed and configured JBoss BRMS 6.
 
 
-Optional Docker Install
------------------------
+Option 2 - Install with one click in xPaaS (brmsPaaS)
+-----------------------------------------------------
+After clicking button, ensure `Gear` size is set to `large`:
 
+[![Click to install OpenShift](http://launch-shifter.rhcloud.com/launch/light/Install brmsPaaS.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url=)
+
+Once installed you can use the JBoss BRMS logins: 
+
+   * u:erics  p: jbossbrms  (admin)
+
+   * u: alan  p: jbossbrms  (analyst)
+
+
+Option 3 - Generate docker install
+----------------------------------
 The following steps can be used to configure and run the demo in a docker container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-install-demo/archive/master.zip)
@@ -59,13 +60,13 @@ Additional information can be found in the jbossdemocentral docker [developer re
 
 Supporting Articles
 -------------------
+[3 shockingly easy ways into JBoss rules, events, planning & BPM](http://www.schabell.org/2015/01/3-shockingly-easy-ways-into-jboss-brms-bpmsuite.html)
 
 [Red Hat JBoss BRMS - all product demos updated for version 6.0.2.GA release](http://www.schabell.org/2014/07/redhat-jboss-brms-product-demos-6.0.2-updated.html)
 
 
 Released versions
 -----------------
-
 See the tagged releases for the following versions of the product:
 
 - v1.6 - JBoss BRMS 6.0.3 installer with optional docker installation.
