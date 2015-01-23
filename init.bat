@@ -3,7 +3,7 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=Install Demo
-set AUTHORS=Eric D. Schabell
+set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:jbossdemocentral/brms-install-demo.git
 set PRODUCT=JBoss BRMS
 set JBOSS_HOME=%PROJECT_HOME%target\jboss-eap-6.1
@@ -33,7 +33,7 @@ echo ##     ####  #  #  #     # ###     #####                       ##
 echo ##                                                             ##   
 echo ##                                                             ##   
 echo ##  brought to you by,                                         ##   
-echo ##             %AUTHORS%                                ##
+echo ##             %AUTHORS%                  ##
 echo ##                                                             ##   
 echo ##  %PROJECT%      ##
 echo ##                                                             ##   

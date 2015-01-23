@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="Install Demo"
-AUTHORS="Eric D. Schabell"
+AUTHORS="Andrew Block, Eric D. Schabell"
 PROJECT="git@github.com:jbossdemocentral/brms-install-demo.git"
 PRODUCT="JBoss BRMS"
 JBOSS_HOME=./target/jboss-eap-6.1
@@ -30,9 +30,9 @@ echo "##     ####  #  #  #     # ###     #####                       ##"
 echo "##                                                             ##"   
 echo "##                                                             ##"   
 echo "##  brought to you by,                                         ##"   
-echo "##             ${AUTHORS}                                ##"
+echo "##             ${AUTHORS}                  ##"
 echo "##                                                             ##"   
-echo "##  ${PROJECT}             ##"
+echo "##  ${PROJECT}      ##"
 echo "##                                                             ##"   
 echo "#################################################################"
 echo
