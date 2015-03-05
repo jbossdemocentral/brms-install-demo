@@ -1,0 +1,24 @@
+{
+  "name":"JBoss BRMS Install Demo",
+  "summary":"Project to automate the installation of this product without preconfiguration beyond a single admin user.
+
+Install options - local, OpenShift and Docker.",
+  "author":"Andrew Block, Eric D. Schabell"
+  "categories":["brms"],
+  "level":"Easy Peasy",
+  "published":true,
+  "prerequisites":"Java 1.7",
+  "targetProduct":"JBoss BRMS",
+  "productVersion":"JBoss BRMS 6.0.0 onwards",
+  "technologies": ["JBoss BRMS"],
+  "links": [ 
+    { 
+      "name":"Code",
+      "url":"https://github.com/jbossdemocentral/brms-install-demo"
+    },
+    {	 
+      "name":"Install brmsPaaS",
+      "url":"https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url="
+    }
+  ]
+}
