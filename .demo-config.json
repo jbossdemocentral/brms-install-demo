@@ -1,8 +1,6 @@
 {
   "name":"JBoss BRMS Install Demo",
-  "summary":"Project to automate the installation of this product without preconfiguration beyond a single admin user.
-
-Install options - local, OpenShift and Docker.",
+  "summary":"Project to automate the installation of this product without preconfiguration beyond a single admin user. Install options - local, OpenShift and Docker.",
   "author":"Andrew Block, Eric D. Schabell"
   "categories":["brms"],
   "level":"Easy Peasy",
