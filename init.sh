@@ -3,15 +3,16 @@ DEMO="Install Demo"
 AUTHORS="Andrew Block, Eric D. Schabell"
 PROJECT="git@github.com:jbossdemocentral/brms-install-demo.git"
 PRODUCT="JBoss BRMS"
-JBOSS_HOME=./target/jboss-eap-6.1
+JBOSS_HOME=./target/jboss-eap-6.4
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
 SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-BRMS=jboss-brms-installer-6.0.3.GA-redhat-1.jar
-VERSION=6.0.3
+BRMS=jboss-brms-6.1.0.GA-installer.jar
+EAP=jboss-eap-6.4.0.CR2-installer.jar
+VERSION=6.1
 
 # wipe screen.
 clear 
@@ -40,6 +41,16 @@ echo
 command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
 
 # make some checks first before proceeding.	
+if [ -r $SRC_DIR/$EAP ] || [ -L $SRC_DIR/$EAP ]; then
+	echo Product sources are present...
+	echo
+else
+	echo Need to download $EAP package from the Customer Portal 
+	echo and place it in the $SRC_DIR directory to proceed...
+	echo
+	exit
+fi
+
 if [ -r $SRC_DIR/$BRMS ] || [ -L $SRC_DIR/$BRMS ]; then
 		echo Product sources are present...
 		echo
@@ -50,18 +61,25 @@ else
 		exit
 fi
 
-# Move the old JBoss instance, if it exists, to the OLD position.
+# Remove the old JBoss instance, if it exists.
 if [ -x $JBOSS_HOME ]; then
-		echo "  - existing JBoss product install detected..."
-		echo
-		echo "  - moving existing JBoss product install aside..."
-		echo
-		rm -rf $JBOSS_HOME.OLD
-		mv $JBOSS_HOME $JBOSS_HOME.OLD
+	echo "  - removing existing JBoss product..."
+	echo
+	rm -rf $JBOSS_HOME
 fi
 
-# Run installer.
-echo Product installer running now...
+# Run installers.
+echo "JBoss EAP installer running now..."
+echo
+java -jar $SRC_DIR/$EAP $SUPPORT_DIR/installation-eap -variablefile $SUPPORT_DIR/installation-eap.variables
+
+if [ $? -ne 0 ]; then
+	echo
+	echo Error occurred during JBoss EAP installation!
+	exit
+fi
+
+echo "JBoss BRMS installer running now..."
 echo
 java -jar $SRC_DIR/$BRMS $SUPPORT_DIR/installation-brms -variablefile $SUPPORT_DIR/installation-brms.variables
 
@@ -77,6 +95,10 @@ cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
 echo "  - setting up standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
+
+echo "  - setup email notification users..."
+echo
+cp $SUPPORT_DIR/userinfo.properties $SERVER_DIR/business-central.war/WEB-INF/classes/
 
 # Add execute permissions to the standalone.sh script.
 echo "  - making sure standalone.sh for server is executable..."
