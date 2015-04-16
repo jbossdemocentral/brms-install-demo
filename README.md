@@ -30,6 +30,8 @@ Once installed you can use the JBoss BRMS logins:
 
    * u: alan  p: jbossbrms  (analyst)
 
+Current hosting of bpmPaaS is on JBoss BRMS 6.0.2 in OpenShift Online.
+
 
 Option 3 - Generate docker install
 ----------------------------------
