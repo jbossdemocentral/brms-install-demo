@@ -2,7 +2,7 @@ JBoss BRMS 6 Install Demo
 =========================
 Project to automate the installation of this product without preconfiguration beyond a single admin user.
 
-There are three options available to you for using this demo; local, OpenShift and Docker.
+There are three options available to you for using this demo; local, OpenShift and containerized.
 
 
 Option 1 - Install on your machine
@@ -33,9 +33,9 @@ Once installed you can use the JBoss BRMS logins:
 Current hosting of bpmPaaS is on JBoss BRMS 6.0.2 in OpenShift Online.
 
 
-Option 3 - Generate docker install
-----------------------------------
-The following steps can be used to configure and run the demo in a docker container
+Option 3 - Generate containerized install
+-----------------------------------------
+The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-install-demo/archive/master.zip)
 
@@ -57,7 +57,7 @@ The following steps can be used to configure and run the demo in a docker contai
 
 7. Enjoy installed and configured JBoss BRMS 6.
 
-Additional information can be found in the jbossdemocentral docker [developer repository](https://github.com/jbossdemocentral/docker-developer)
+Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
 
 Supporting Articles
