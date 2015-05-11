@@ -51,9 +51,9 @@ The following steps can be used to configure and run the demo in a container
 5. Start demo container
 
 	```
-	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-install-demo
+	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-install-demo
 	```
-6. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:jbossbrms1!)
+6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:jbossbrms1!)
 
 7. Enjoy installed and configured JBoss BRMS 6.
 
