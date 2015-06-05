@@ -38,8 +38,6 @@ echo "##                                                             ##"
 echo "#################################################################"
 echo
 
-command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
-
 # make some checks first before proceeding.	
 if [ -r $SRC_DIR/$EAP ] || [ -L $SRC_DIR/$EAP ]; then
 	echo Product sources are present...
