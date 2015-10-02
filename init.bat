@@ -13,9 +13,9 @@ set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
-set BRMS=jboss-brms-6.1.0.GA-installer.jar
-set EAP=jboss-eap-6.4.0-installer.jar
-set VERSION=6.1
+set BRMS=jboss-brms-6.2.0.GA-installer.jar
+set EAP=jboss-eap-6.4.3-installer.jar
+set VERSION=6.2
 
 REM wipe screen.
 cls

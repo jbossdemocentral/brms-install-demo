@@ -77,6 +77,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.8 - JBoss BRMS 6.2.0 and JBoss EAP 6.4.3 installation.
+
 - v1.7 - JBoss BRMS 6.1 installer on JBoss EAP 6.4.
 
 - v1.6 - JBoss BRMS 6.0.3 installer with optional docker installation.
