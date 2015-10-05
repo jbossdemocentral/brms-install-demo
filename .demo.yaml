@@ -7,4 +7,4 @@ technologies:
 summary: Project to automate the installation of this product without preconfiguration beyond a single admin user. There are three options available to you for using this demo; local, OpenShift and containerized.
 level: Intermediate
 product: brms
-author: 
+author: Andrew Block, Eric D. Schabell
