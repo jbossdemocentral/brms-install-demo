@@ -42,7 +42,7 @@ echo #################################################################
 echo.
 
 REM make some checks first before proceeding.	
-if exist %SRC_DIR%\%EAP% (
+if exist "%SRC_DIR%\%EAP%" (
         echo Product sources are present...
         echo.
 ) else (
@@ -52,7 +52,7 @@ if exist %SRC_DIR%\%EAP% (
         GOTO :EOF
 )
 
-if exist %SRC_DIR%\%BRMS% (
+if exist "%SRC_DIR%\%BRMS%" (
         echo Product sources are present...
         echo.
 ) else (
@@ -63,7 +63,7 @@ if exist %SRC_DIR%\%BRMS% (
 )
 
 REM Remove the old JBoss instance, if it exists.
-if exist %JBOSS_HOME% (
+if exist "%JBOSS_HOME%" (
          echo - removing existing JBoss product install...
          echo.
         
@@ -74,7 +74,7 @@ if exist %JBOSS_HOME% (
 REM Run installers.
 echo EAP installer running now...
 echo.
-call java -jar %SRC_DIR%/%EAP% %SUPPORT_DIR%\installation-eap -variablefile %SUPPORT_DIR%\installation-eap.variables
+call java -jar "%SRC_DIR%/%EAP%" "%SUPPORT_DIR%\installation-eap" -variablefile "%SUPPORT_DIR%\installation-eap.variables"
 
 
 if not "%ERRORLEVEL%" == "0" (
@@ -86,7 +86,7 @@ if not "%ERRORLEVEL%" == "0" (
 
 echo JBoss BRMS installer running now...
 echo.
-call java -jar %SRC_DIR%/%BRMS% %SUPPORT_DIR%\installation-brms -variablefile %SUPPORT_DIR%\installation-brms.variables
+call java -jar "%SRC_DIR%/%BRMS%" "%SUPPORT_DIR%\installation-brms" -variablefile "%SUPPORT_DIR%\installation-brms.variables"
 
 if not "%ERRORLEVEL%" == "0" (
 	echo Error Occurred During %PRODUCT% Installation!
