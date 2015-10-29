@@ -1,5 +1,5 @@
 id: jbossdemocentral-brms-install
-title: JBoss BRMS easy install project to automate the installation of this product without preconfiguration beyond a single admin user.
+title: JBoss BRMS Easy Install Project
 github_repo_url: https://github.com/jbossdemocentral/brms-install-demo
 technologies:
   - JBoss EAP
