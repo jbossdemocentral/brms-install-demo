@@ -13,8 +13,9 @@ set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
-set BRMS=jboss-brms-6.2.0.GA-installer.jar
-set EAP=jboss-eap-6.4.3-installer.jar
+set BRMS=jboss-brms-6.2.0.CR1-installer.jar
+set EAP=jboss-eap-6.4.0-installer.jar
+set EAP_PATCH=jboss-eap-6.4.4-patch.zip
 set VERSION=6.2
 
 REM wipe screen.
@@ -52,6 +53,16 @@ if exist "%SRC_DIR%\%EAP%" (
         GOTO :EOF
 )
 
+if exist %SRC_DIR%\%EAP_PATCH% (
+        echo Product patches are present...
+        echo.
+) else (
+        echo Need to download %EAP_PATCH% package from the Customer Support Portal
+        echo and place it in the %SRC_DIR% directory to proceed...
+        echo.
+        GOTO :EOF
+)
+
 if exist "%SRC_DIR%\%BRMS%" (
         echo Product sources are present...
         echo.
@@ -84,6 +95,20 @@ if not "%ERRORLEVEL%" == "0" (
 	GOTO :EOF
 )
 
+call set NOPAUSE=true
+
+echo.
+echo Applying JBoss EAP patch now...
+echo.
+call %JBOSS_HOME%/bin/jboss-cli.bat --command="patch apply %SRC_DIR%/%EAP_PATCH% --override-all"
+
+if not "%ERRORLEVEL%" == "0" (
+  echo.
+	echo Error Occurred During JBoss EAP Patch Installation!
+	echo.
+	GOTO :EOF
+)
+
 echo JBoss BRMS installer running now...
 echo.
 call java -jar "%SRC_DIR%/%BRMS%" "%SUPPORT_DIR%\installation-brms" -variablefile "%SUPPORT_DIR%\installation-brms.variables"
@@ -106,7 +131,7 @@ echo.
 
 echo - setup email task notification users...
 echo.
-xcopy "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
+xcopy /Y /Q "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
 
 echo.
 echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
