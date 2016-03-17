@@ -41,21 +41,19 @@ The following steps can be used to configure and run the demo in a container
 
 2. Add product installer to installs directory.
 
-3. Copy contents of support/docker directory to the project root.
-
-4. Build demo image
+3. Build demo image
 
 	```
 	docker build -t jbossdemocentral/brms-install-demo .
 	```
-5. Start demo container
+4. Start demo container
 
 	```
 	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-install-demo
 	```
-6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:jbossbrms1!)
+5. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:jbossbrms1!)
 
-7. Enjoy installed and configured JBoss BRMS 6.
+6. Enjoy installed and configured JBoss BRMS 6.
 
 Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
