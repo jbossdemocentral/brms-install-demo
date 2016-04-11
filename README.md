@@ -2,7 +2,8 @@ JBoss BRMS 6 Install Demo
 =========================
 Project to automate the installation of this product without preconfiguration beyond a single admin user.
 
-There are three options available to you for using this demo; local, OpenShift and containerized.
+There are four options available to you for using this demo; local, Openshift Online, Red Hat CDK OpenShift Enterprise and
+Containerized.
 
 
 Option 1 - Install on your machine
@@ -33,7 +34,15 @@ Once installed you can use the JBoss BRMS logins:
 Current hosting of bpmPaaS is on JBoss BRMS 6.0.2 in OpenShift Online.
 
 
-Option 3 - Generate containerized install
+Option 3 - Install on Red Hat CDK OpenShift Enterprise image
+------------------------------------------------------------
+The following steps can be used to install this demo on OpenShift Enterprise using the
+Red Hat Container Development Kit (CDK)
+
+1. [App Dev Cloud with JBoss BRMS Install Demo](https://github.com/redhatdemocentral/rhcs-brms-install-demo)
+
+
+Option 4 - Generate containerized install
 -----------------------------------------
 The following steps can be used to configure and run the demo in a container
 
@@ -76,6 +85,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v2.1 - JBoss BRMS 6.2.0-BZ-1299002 on JBoss EAP 6.4.4 and running on Red Hat CDK using OpenShift Enterprise image.
 
 - v2.0 - JBoss BRMS 6.2.0-BZ-1299002 on JBoss EAP 6.4.4.
 
