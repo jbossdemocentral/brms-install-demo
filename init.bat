@@ -53,7 +53,7 @@ if exist "%SRC_DIR%\%EAP%" (
         GOTO :EOF
 )
 
-if exist %SRC_DIR%\%EAP_PATCH% (
+if exist "%SRC_DIR%\%EAP_PATCH%" (
         echo Product patches are present...
         echo.
 ) else (
