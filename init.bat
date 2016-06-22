@@ -16,7 +16,7 @@ set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
 set BRMS=jboss-brms-6.3.0.GA-installer.jar
 set EAP=jboss-eap-6.4.0-installer.jar
-set EAP_PATCH=jboss-eap-6.4.8-patch.zip
+set EAP_PATCH=jboss-eap-6.4.7-patch.zip
 set VERSION=6.3
 
 REM wipe screen.
