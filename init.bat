@@ -4,6 +4,7 @@ setlocal
 set PROJECT_HOME=%~dp0
 set DEMO=Install Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
+set AUTHORS2=Duncan Doyle, Jaen Swart
 set PROJECT=git@github.com:jbossdemocentral/brms-install-demo.git
 set PRODUCT=JBoss BRMS
 set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.4
@@ -13,36 +14,37 @@ set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
-set BRMS=jboss-brms-installer-6.2.0.BZ-1299002.jar
+set BRMS=jboss-brms-6.3.0.GA-installer.jar
 set EAP=jboss-eap-6.4.0-installer.jar
-set EAP_PATCH=jboss-eap-6.4.4-patch.zip
-set VERSION=6.2
+set EAP_PATCH=jboss-eap-6.4.8-patch.zip
+set VERSION=6.3
 
 REM wipe screen.
 cls
 
 echo.
 echo #################################################################
-echo ##                                                             ##   
+echo ##                                                             ##
 echo ##  Setting up the %DEMO%                                ##
-echo ##                                                             ##   
-echo ##                                                             ##   
+echo ##                                                             ##
+echo ##                                                             ##
 echo ##     ####  ####   #   #   ###    #####                       ##
 echo ##     #   # #   # # # # # #       #                           ##
 echo ##     ####  ####  #  #  #  ##     #####                       ##
 echo ##     #   # # #   #     #    #    #   #                       ##
 echo ##     ####  #  #  #     # ###     #####                       ##
-echo ##                                                             ##   
-echo ##                                                             ##   
-echo ##  brought to you by,                                         ##   
+echo ##                                                             ##
+echo ##                                                             ##
+echo ##  brought to you by,                                         ##
 echo ##             %AUTHORS%                  ##
-echo ##                                                             ##   
+echo ##             %AUTHORS2%             ##
+echo ##                                                             ##
 echo ##  %PROJECT%      ##
-echo ##                                                             ##   
+echo ##                                                             ##
 echo #################################################################
 echo.
 
-REM make some checks first before proceeding.	
+REM make some checks first before proceeding.
 if exist "%SRC_DIR%\%EAP%" (
         echo Product sources are present...
         echo.
@@ -77,7 +79,7 @@ REM Remove the old JBoss instance, if it exists.
 if exist "%JBOSS_HOME%" (
          echo - removing existing JBoss product install...
          echo.
-        
+
          rmdir /s /q "%JBOSS_HOME%"
  )
 
@@ -122,7 +124,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo - enabling demo accounts role setup in application-roles.properties file...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\application-roles.properties" "%SERVER_CONF%"
-echo. 
+echo.
 
 echo - setting up standalone.xml configuration adjustments...
 echo.
@@ -138,7 +140,7 @@ echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
 echo.
 echo You can open business central in browser at:
 echo.
-echo  localhost:8080/business-central 
+echo  localhost:8080/business-central
 echo.
 echo and login as user: erics and password: jbossbrms1!
 echo.

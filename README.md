@@ -1,4 +1,4 @@
-JBoss BRMS 6 Install Demo 
+JBoss BRMS 6 Install Demo
 =========================
 Project to automate the installation of this product without preconfiguration beyond a single admin user.
 
@@ -25,7 +25,7 @@ After clicking button, ensure `Gear` size is set to `large`:
 
 [![Click to install OpenShift](http://launch-shifter.rhcloud.com/launch/light/Install brmsPaaS.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url=)
 
-Once installed you can use the JBoss BRMS logins: 
+Once installed you can use the JBoss BRMS logins:
 
    * u:erics  p: jbossbrms  (admin)
 
@@ -71,7 +71,7 @@ Additional information can be found in the jbossdemocentral container [developer
 
 Supporting Articles
 -------------------
-- [7 Steps to Your First Rules with JBoss BRMS Starter Kit](http://www.schabell.org/2015/08/7-steps-first-rules-jboss-brms-starter-kit.html)	
+- [7 Steps to Your First Rules with JBoss BRMS Starter Kit](http://www.schabell.org/2015/08/7-steps-first-rules-jboss-brms-starter-kit.html)
 
 - [3 shockingly easy ways into JBoss rules, events, planning & BPM](http://www.schabell.org/2015/01/3-shockingly-easy-ways-into-jboss-brms-bpmsuite.html)
 
@@ -90,7 +90,7 @@ See the tagged releases for the following versions of the product:
 
 - v2.0 - JBoss BRMS 6.2.0-BZ-1299002 on JBoss EAP 6.4.4.
 
-- v1.9 - JBoss BRMS 6.2.0, JBoss EAP 6.4.4 and OSE aligned containerization. 
+- v1.9 - JBoss BRMS 6.2.0, JBoss EAP 6.4.4 and OSE aligned containerization.
 
 - v1.8 - JBoss BRMS 6.2.0 and JBoss EAP 6.4.4 installation.
 
