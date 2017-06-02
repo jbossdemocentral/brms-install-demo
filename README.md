@@ -31,7 +31,7 @@ Option 2 - Run in Docker
 -----------------------------------------
 The following steps can be used to configure and run the demo in a container
 
-1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-install-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-install-demo/archive/master.zip)
 
 2. Add the EAP installer and BRMS deployable to installs directory.
 
