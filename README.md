@@ -27,8 +27,13 @@ Option 1 - Install on your machine
 6. Enjoy installed and configured JBoss BRMS 6.
 
 
-Option 2 - Run in Docker
------------------------------------------
+Option 2 - Install on OpenShift
+-------------------------------
+Running this demo in a container on any OpenShift Container Platform is [available at Red Hat Demo Central](https://github.com/redhatdemocentral/rhcs-brms-install-demo).
+
+
+Option 3 - Install in container
+-------------------------------
 The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-install-demo/archive/master.zip)
@@ -44,29 +49,6 @@ The following steps can be used to configure and run the demo in a container
 7. Enjoy installed and configured JBoss BRMS 6.
 
 Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
-
-
-Option 3 - Install with one click in xPaaS (brmsPaaS)
------------------------------------------------------
-After clicking button, ensure `Gear` size is set to `large`:
-
-[![Click to install OpenShift](http://launch-shifter.rhcloud.com/launch/light/Install brmsPaaS.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=https://raw.githubusercontent.com/jbossdemocentral/cartridge-brmsPaaS/master/metadata/manifest.yml&name=brmspaas&gear_profile=large&initial_git_url=)
-
-Once installed you can use the JBoss BRMS logins:
-
-   * u:erics  p: jbossbrms  (admin)
-
-   * u: alan  p: jbossbrms  (analyst)
-
-Current hosting of bpmPaaS is on JBoss BRMS 6.0.2 in OpenShift Online.
-
-
-Option 4 - Install on Red Hat CDK OpenShift Enterprise image
-------------------------------------------------------------
-The following steps can be used to install this demo on OpenShift Enterprise using the
-Red Hat Container Development Kit (CDK)
-
-1. [App Dev Cloud with JBoss BRMS Install Demo](https://github.com/redhatdemocentral/rhcs-brms-install-demo)
 
 
 Supporting Articles
